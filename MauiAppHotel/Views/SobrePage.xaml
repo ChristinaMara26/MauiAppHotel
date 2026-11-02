@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel.Views.SobrePage"
+             Title="Sobre o Aplicativo"
+             BackgroundColor="{StaticResource Gray100}">
+
+    <VerticalStackLayout Spacing="20" Padding="25" VerticalOptions="Center">
+
+        <!-- Ícone ou Título Principal -->
+        <Label Text="MauiAppHotel"
+               FontSize="32"
+               FontAttributes="Bold"
+               TextColor="{StaticResource Primary}"
+               HorizontalOptions="Center" />
+
+        <Label Text="Sistema de Gerenciamento e Cálculo de Hospedagem"
+               FontSize="16"
+               TextColor="{StaticResource Secondary}"
+               HorizontalOptions="Center"
+               HorizontalTextAlignment="Center" />
+
+        <!-- Cartão de Informações do Desenvolvedor -->
+        <Border StrokeThickness="1" Stroke="{StaticResource Gray200}" Padding="20" BackgroundColor="White">
+            <VerticalStackLayout Spacing="12">
+
+                <Label Text="Informações do Projeto" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       TextColor="{StaticResource Primary}" />
+
+                <BoxView HeightRequest="1" Color="{StaticResource Gray200}" />
+
+                <Grid RowDefinitions="Auto, Auto, Auto" ColumnDefinitions="Auto, *" RowSpacing="8">
+                    <Label Grid.Row="0" Grid.Column="0" Text="Desenvolvedor:" FontAttributes="Bold" />
+                    <Label Grid.Row="0" Grid.Column="1" Text=" Christina Tessari" Margin="5,0,0,0" />
+
+                    <Label Grid.Row="1" Grid.Column="0" Text="Ano de Criação:" FontAttributes="Bold" />
+                    <Label Grid.Row="1" Grid.Column="1" Text=" 2026" Margin="5,0,0,0" />
+
+                    <Label Grid.Row="2" Grid.Column="0" Text="Versão:" FontAttributes="Bold" />
+                    <Label Grid.Row="2" Grid.Column="1" Text=" 1.0.0" Margin="5,0,0,0" />
+                </Grid>
+
+            </VerticalStackLayout>
+        </Border>
+
+        <!-- Botão para voltar -->
+        <Button Text="Voltar"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"
+                CornerRadius="8"
+                Clicked="Button_Voltar_Clicked" />
+
+    </VerticalStackLayout>
+</ContentPage>
